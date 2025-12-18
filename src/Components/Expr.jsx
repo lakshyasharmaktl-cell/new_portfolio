@@ -7,7 +7,7 @@ export default function Expr() {
   const experiences = [
     {
       id: 1,
-      title: "Full Stack Developer",
+      title: "Node js Developer",
       company: "Tech Innovations Inc.",
       period: "2022 - Present",
       location: "Remote",
@@ -44,19 +44,7 @@ export default function Expr() {
       technologies: ["Python", "Django", "PostgreSQL", "Docker", "Redis"],
       achievements: ["Reduced API response time by 50%", "Implemented microservices architecture", "Handled 1M+ daily requests"]
     },
-    {
-      id: 4,
-      title: "Web Development Intern",
-      company: "StartUp Ventures",
-      period: "2019 - 2020",
-      location: "Boston, MA",
-      type: "Internship",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500",
-      description: "Assisted in developing company website and internal tools. Learned industry best practices and modern development workflows.",
-      technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "Git"],
-      achievements: ["Built company website from scratch", "Automated internal processes", "Received full-time offer"]
-    }
+    
   ];
 
   useEffect(() => {
@@ -78,7 +66,7 @@ export default function Expr() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 py-20 px-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-gray-900 to-slate-900 py-20 px-4">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>

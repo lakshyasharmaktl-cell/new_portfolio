@@ -5,7 +5,7 @@ export default function Home() {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
-  const fullText = "Hi, I am a full stack developer and a web designer so I will team up with you, and I am student in cyber security student and also a add a BCA degree 2025. ❤️";
+  const fullText = "Hi, I am Lakshya , I am a Web Devloper and also a BCA student of RKSD COLLEGE , I very passion of cyber security. ❤️";
 
   useEffect(() => {
     // Image animation
@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-black-300 to-slate-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -64,9 +64,9 @@ export default function Home() {
               
               <img 
                 ref={imageRef}
-                src="https://media.istockphoto.com/id/1411155612/photo/side-profile-of-a-beautiful-young-black-woman-thinking-and-looking-powerful-standing-against.jpg?s=612x612&w=0&k=20&c=q64YMacmkFA78WDmlShv9Q44va-8k2iDaYFIkWNeyqg=" 
+                src="https://res.cloudinary.com/dzskwfinc/image/upload/v1766069669/WhatsApp_Image_2025-12-18_at_8.21.49_PM_madqwt.jpg" 
                 alt="Profile" 
-                className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-4 border-white/20 backdrop-blur-sm"
+                className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-white/20 backdrop-blur-sm"
               />
             </div>
           </div>
