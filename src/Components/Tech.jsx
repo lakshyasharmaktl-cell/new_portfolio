@@ -69,7 +69,7 @@ export default function Tech() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center cursor-pointer relativee"
                 onMouseEnter={() => setActiveIndex(index)}
               >
                 {/* Icon Card */}
