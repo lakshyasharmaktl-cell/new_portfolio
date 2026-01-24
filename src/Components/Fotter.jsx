@@ -19,9 +19,9 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: <Mail className="w-4 h-4" />, text: 'your.email@example.com' },
-    { icon: <Phone className="w-4 h-4" />, text: '+1 234 567 8900' },
-    { icon: <MapPin className="w-4 h-4" />, text: 'Your City, Country' }
+    { icon: <Mail className="w-4 h-4" />, text: 'lakshyasharmaktl@gmail.com' },
+    { icon: <Phone className="w-4 h-4" />, text: '+91 7495065307' },
+    { icon: <MapPin className="w-4 h-4" />, text: 'Kaithal,Haryana' }
   ];
 
   return (
@@ -117,7 +117,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-gray-400">
               <span>© {currentYear} Portfolio. Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-              <span>by Your Name</span>
+              <span>by Lakshya</span>
             </div>
             
             <div className="flex gap-6 text-sm text-gray-400">
