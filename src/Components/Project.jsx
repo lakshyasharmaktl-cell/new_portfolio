@@ -1,102 +1,108 @@
 import React from 'react';
-import { ExternalLink, Github, Folder } from 'lucide-react';
+import { ExternalLink, Github, Folder, Globe } from 'lucide-react';
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
+    <div className="min-h-screen bg-gray-50 py-16 px-4">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-14">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            My Project
+            Featured Project
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Below is a detailed description of my main project developed as part of my learning and portfolio.
-          </p>
+            A deep dive into my full-stack development journey with the MigrationHub Project.
+          </p> 
+
         </div>
 
         {/* Project Card */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8">
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden">
+          
+          {/* Top Branding Bar */}
+          <div className="bg-blue-600 py-2 px-8 flex justify-between items-center">
+            <span className="text-white text-xs font-bold uppercase tracking-widest">Powered by Migrationhub.in</span>
+            <Globe className="w-4 h-4 text-blue-200" />
+          </div>
 
-          {/* Title */}
-          <div className="flex items-center gap-4 mb-6">
-            <Folder className="w-10 h-10 text-blue-600" />
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800">
-                Whisky (Wisky) Project
-              </h2>
-              <span className="text-sm text-blue-600 font-medium">
-                Full Stack Web Application
+          <div className="p-8">
+            {/* Title & Badge */}
+            <div className="flex items-start justify-between mb-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-blue-50 rounded-lg">
+                  <Folder className="w-8 h-8 text-blue-600" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    MigrationHub
+                  </h2>
+                  <p className="text-sm text-gray-500">
+                    Deployment Partner: <span className="text-blue-600 font-semibold">Migrationhub.in</span>
+                  </p>
+                </div>
+              </div>
+              <span className="hidden sm:block px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
+                LIVE NOW
               </span>
             </div>
-          </div>
 
-          {/* Description */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              The <strong>Whisky (Wisky) Project</strong> is a full-stack web application designed to showcase
-              premium whisky brands and provide detailed information about different whisky categories,
-              flavors, origins, and pricing. This project focuses on creating a clean, modern, and
-              user-friendly interface for whisky lovers and premium drink enthusiasts.
-            </p>
+            {/* Description Section */}
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+  <p>
+    The <strong>Migration Hub Lines</strong> project is a modern
+    <strong> frontend web application</strong> designed to visually present
+    global migration pathways. It helps users explore study, work, and
+    residency options across multiple countries through a clean and intuitive
+    interface.
+  </p>
 
-            <p>
-              The application allows users to explore various whisky brands, view detailed product pages,
-              and understand brand history and premium collections. The frontend is developed using
-              <strong> React </strong> with <strong>Tailwind CSS</strong> to ensure a responsive and visually
-              appealing design across all devices.
-            </p>
+  <p>
+    Built entirely on the <strong>Frontend</strong> using
+    <strong> React and Tailwind CSS</strong>, the application focuses on
+    responsive design, smooth navigation, and user-friendly layouts.
+    The project demonstrates strong UI/UX principles without relying on
+    backend services.
+  </p>
+</div>
 
-            <p>
-              On the backend, the project uses <strong>Node.js</strong> and <strong>MongoDB</strong> to manage
-              product data, user interactions, and secure API handling. The application structure follows
-              proper MVC principles to ensure scalability and maintainability.
-            </p>
+{/* Technologies */}
+<div className="mt-8 pt-6 border-t border-gray-100">
+  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
+    Core Tech Stack
+  </h3>
+  <div className="flex flex-wrap gap-2">
+    {["React", "Tailwind CSS", "React Router DOM"].map(
+      (tech) => (
+        <span
+          key={tech}
+          className="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-sm font-medium"
+        >
+          {tech}
+        </span>
+      )
+    )}
+  </div>
+</div>
 
-            <p>
-              This project helped me gain hands-on experience in full-stack development, component-based UI
-              design, database integration, and modern web development practices. It also improved my
-              understanding of real-world application flow, data handling, and user experience design.
-            </p>
-          </div>
+{/* Links / Deployment Section */}
+<div className="mt-10 w-100  flex justify-center ">
+  <a
+    href="https://migrationhub.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex jus gap-3 px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-200"
+  >
+    <ExternalLink className="w-5 h-5" />
+    Launch Live App
+  </a>
 
-          {/* Technologies */}
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              Technologies Used
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {["React", "Tailwind CSS", "Node.js", "MongoDB", "JavaScript", "REST API"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+ 
+</div>
 
-          {/* Links */}
-          <div className="flex gap-6 mt-8">
-            <a
-              href="#"
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-            >
-              <ExternalLink className="w-5 h-5" />
-              Live Demo
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 font-medium"
-            >
-              <Github className="w-5 h-5" />
-              Source Code
-            </a>
+
           </div>
         </div>
-
       </div>
     </div>
   );
