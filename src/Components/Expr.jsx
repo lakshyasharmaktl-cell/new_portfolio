@@ -15,8 +15,8 @@ export default function Expr() {
       icon: <Code className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500",
       description: "Developed and maintained web applications using modern technologie",
-      technologies: ["React", "Node.js", "MongoDB","Tailwind css"],
-      achievements: ["Increased performance by 40%", "Reduced load time by 60%", ]
+      technologies: ["Express.js", "Nodemailer", "MongoDB","Dotenv"],
+      achievements: ["Successfully delivered a client-based frontend project (Wisky Hub) with a responsive and modern user interface.", "Integrated RESTful APIs using Express.js and Axios for seamless communication between frontend and backend.", ]
     },
     {
       id: 2,
@@ -28,8 +28,8 @@ export default function Expr() {
       icon: <Palette className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500",
       description: "Created responsive and interactive user interfaces for various clients. Collaborated with UX designers to implement pixel-perfect designs.",
-      technologies: ["React", "Vue.js", "Sass", "JavaScript", "Webpack"],
-      achievements: ["Improved UX by 35%", "Built 15+ reusable components", ]
+      technologies: ["React.js", "Tailwind css", "react Router", "Framer-motion", "lucide React(icons)"],
+      achievements: ["Improved user experience by creating a responsive layout compatible across multiple devices using Tailwind CSS.", "Designed and built reusable React components to ensure scalable and maintainable frontend architecture." ]
     },
     {
       id: 3,
@@ -41,8 +41,8 @@ export default function Expr() {
       icon: <Server className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500",
       description: "Built robust backend systems and APIs. Optimized database performance and implemented secure authentication systems.",
-      technologies: ["Python", "Django", "PostgreSQL", "Docker", "Redis"],
-      achievements: ["Reduced API response time by 50%", "Implemented microservices architecture", "Handled 1M+ daily requests"]
+      technologies: ["Nodejs", "Axios", "MongoDB", "JWT", "Express.js"],
+      achievements: ["Implemented a secure email OTP system using Node.js and Nodemailer to enhance user authentication.", "Developed a full-stack web application using the MERN stack with complete authentication and OTP verification functionality.", ""]
     },
     
   ];
