@@ -14,9 +14,9 @@ export default function Expr() {
       type: "Full-time",
       icon: <Code className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500",
-      description: "Developed and maintained web applications using modern technologies. Led a team of 3 developers and delivered 10+ successful projects.",
-      technologies: ["React", "Node.js", "MongoDB", "AWS", "TypeScript"],
-      achievements: ["Increased performance by 40%", "Reduced load time by 60%", "Led team of 5 developers"]
+      description: "Developed and maintained web applications using modern technologie",
+      technologies: ["React", "Node.js", "MongoDB","Tailwind css"],
+      achievements: ["Increased performance by 40%", "Reduced load time by 60%", ]
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export default function Expr() {
       color: "from-purple-500 to-pink-500",
       description: "Created responsive and interactive user interfaces for various clients. Collaborated with UX designers to implement pixel-perfect designs.",
       technologies: ["React", "Vue.js", "Sass", "JavaScript", "Webpack"],
-      achievements: ["Improved UX by 35%", "Built 15+ reusable components", "Mentored 2 junior developers"]
+      achievements: ["Improved UX by 35%", "Built 15+ reusable components", ]
     },
     {
       id: 3,
