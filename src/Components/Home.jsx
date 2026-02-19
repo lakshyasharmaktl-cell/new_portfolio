@@ -19,7 +19,6 @@ export default function Home() {
       imageElement.style.transform = 'scale(1)';
     }, 500);
 
-    // Right to left typing animation
     let currentIndex = fullText.length;
     let typingInterval;
 
@@ -64,7 +63,7 @@ export default function Home() {
               
               <img 
                 ref={imageRef}
-                src="https://res.cloudinary.com/dzskwfinc/image/upload/v1766069669/WhatsApp_Image_2025-12-18_at_8.21.49_PM_madqwt.jpg" 
+                src="https://res.cloudinary.com/dzskwfinc/image/upload/v1771509595/Gemini_Generated_Image_20enx720enx720en_egu7he.png" 
                 alt="Profile" 
                 className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-white/20 backdrop-blur-sm"
               />
