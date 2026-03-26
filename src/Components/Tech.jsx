@@ -30,10 +30,10 @@ export default function Tech() {
     { icon: FileCode, name: "JavaScript", color: "text-yellow-300" },
     { icon: Box, name: "TypeScript", color: "text-blue-500" },
     { icon: Database, name: "MongoDB", color: "text-green-400" },
-    { icon: Layout, name: "PostgreSQL", color: "text-blue-400" },
+    // { icon: Layout, name: "PostgreSQL", color: "text-blue-400" },
     { icon: Cloud, name: "AWS", color: "text-orange-400" },
-    { icon: Cpu, name: "Docker", color: "text-blue-300" },
-    { icon: Network, name: "Kubernetes", color: "text-blue-400" },
+    // { icon: Cpu, name: "Docker", color: "text-blue-300" },
+    // { icon: Network, name: "Kubernetes", color: "text-blue-400" },
     { icon: GitBranch, name: "Git", color: "text-orange-500" },
     { icon: Shield, name: "Security", color: "text-yellow-300" },
     { icon: Smartphone, name: "Mobile", color: "text-purple-400" },
@@ -41,7 +41,7 @@ export default function Tech() {
     { icon: Zap, name: "Express", color: "text-gray-300" },
     { icon: Globe, name: "Next.js", color: "text-white" },
     { icon: Palette, name: "Tailwind CSS", color: "text-cyan-300" },
-    { icon: ShieldCheck, name: "Redis", color: "text-red-500" }
+    // { icon: ShieldCheck, name: "Redis", color: "text-red-500" }
   ];
 
   return (
