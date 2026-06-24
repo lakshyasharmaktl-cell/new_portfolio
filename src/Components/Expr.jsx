@@ -87,9 +87,7 @@ export default function Expr() {
               Work Experience
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            My professional journey through innovative companies and challenging projects
-          </p>
+          
         </div>
 
         {/* Experience Timeline */}
