@@ -1,107 +1,141 @@
 import React from 'react';
-import { ExternalLink, Github, Folder, Globe } from 'lucide-react';
+import { ExternalLink, Github, Folder, Globe, Code2, ShoppingBag } from 'lucide-react';
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gray-50 py-12 px-4">
+      <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-14">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Featured Project
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-gray-800 mb-3">
+            Featured Projects
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A deep dive into my full-stack development journey with the MigrationHub Project.
-          </p> 
-
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            Exploring full-stack development with MigrationHub, innovative solutions with Loopix, and e-commerce with Olax.
+          </p>
         </div>
 
-        {/* Project Card */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden">
+        {/* Projects Grid - 3 columns on large screens, 2 on medium, 1 on small */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          {/* Top Branding Bar */}
-          <div className="bg-blue-600 py-2 px-8 flex justify-between items-center">
-            <span className="text-white text-xs font-bold uppercase tracking-widest">Powered by Migrationhub.in</span>
-            <Globe className="w-4 h-4 text-blue-200" />
-          </div>
-
-          <div className="p-8">
-            {/* Title & Badge */}
-            <div className="flex items-start justify-between mb-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <Folder className="w-8 h-8 text-blue-600" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-800">
-                    MigrationHub
-                  </h2>
-                  <p className="text-sm text-gray-500">
-                    Deployment Partner: <span className="text-blue-600 font-semibold">Migrationhub.in</span>
-                  </p>
-                </div>
-              </div>
-              <span className="hidden sm:block px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                LIVE NOW
-              </span>
+          {/* MigrationHub Project Card */}
+          <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden flex flex-col">
+            {/* Top Branding Bar */}
+            <div className="bg-blue-600 py-1.5 px-4 flex justify-between items-center">
+              <span className="text-white text-xs font-bold uppercase tracking-widest">MigrationHub</span>
+              <Globe className="w-3.5 h-3.5 text-blue-200" />
             </div>
 
-            {/* Description Section */}
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-  <p>
-    The <strong>Migration Hub Lines</strong> project is a modern
-    <strong> frontend web application</strong> designed to visually present
-    global migration pathways. It helps users explore study, work, and
-    residency options across multiple countries through a clean and intuitive
-    interface.
-  </p>
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-blue-50 rounded-lg">
+                  <Folder className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-gray-800">MigrationHub</h2>
+                  <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">LIVE</span>
+                </div>
+              </div>
 
-  <p>
-    Built entirely on the <strong>Frontend</strong> using
-    <strong> React and Tailwind CSS</strong>, the application focuses on
-    responsive design, smooth navigation, and user-friendly layouts.
-    The project demonstrates strong UI/UX principles without relying on
-    backend services.
-  </p>
-</div>
+              <p className="text-sm text-gray-700 leading-relaxed flex-1">
+                Visualizing global migration pathways for study, work, and residency options.
+              </p>
 
-{/* Technologies */}
-<div className="mt-8 pt-6 border-t border-gray-100">
-  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
-    Core Tech Stack
-  </h3>
-  <div className="flex flex-wrap gap-2">
-    {["React", "Tailwind CSS", "React Router DOM"].map(
-      (tech) => (
-        <span
-          key={tech}
-          className="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-sm font-medium"
-        >
-          {tech}
-        </span>
-      )
-    )}
-  </div>
-</div>
-
-{/* Links / Deployment Section */}
-<div className="mt-10 w-100  flex justify-center ">
-  <a
-    href="https://migrationhub.in"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex jus gap-3 px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-200"
-  >
-    <ExternalLink className="w-5 h-5" />
-    Launch Live App
-  </a>
-
- 
-</div>
-
-
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {["React", "Tailwind CSS", "React Router"].map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-xs font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <a href="https://migrationhub.in" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all text-sm">
+                  <ExternalLink className="w-3.5 h-3.5" /> Launch
+                </a>
+              </div>
+            </div>
           </div>
+
+          {/* Loopix Project Card */}
+          <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden flex flex-col">
+            <div className="bg-purple-600 py-1.5 px-4 flex justify-between items-center">
+              <span className="text-white text-xs font-bold uppercase tracking-widest">Full Stack</span>
+              <Code2 className="w-3.5 h-3.5 text-purple-200" />
+            </div>
+
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-purple-50 rounded-lg">
+                  <Folder className="w-5 h-5 text-purple-600" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-gray-800">Loopix</h2>
+                  <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">LIVE</span>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-700 leading-relaxed flex-1">
+                Full-stack project showcasing modern web development with seamless user experience.
+              </p>
+
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {["React", "Node.js", "MongoDB", "Express"].map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-xs font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-2">
+                  <a href="https://loopix-three.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-all text-sm">
+                    <ExternalLink className="w-3.5 h-3.5" /> Demo
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-800 hover:bg-gray-900 text-white rounded-lg font-medium transition-all text-sm">
+                    <Github className="w-3.5 h-3.5" /> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Olax Project Card */}
+          <div className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden flex flex-col">
+            <div className="bg-orange-500 py-1.5 px-4 flex justify-between items-center">
+              <span className="text-white text-xs font-bold uppercase tracking-widest">E-Commerce</span>
+              <ShoppingBag className="w-3.5 h-3.5 text-orange-200" />
+            </div>
+
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-orange-50 rounded-lg">
+                  <ShoppingBag className="w-5 h-5 text-orange-500" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-gray-800">Olax</h2>
+                  <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">LIVE</span>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-700 leading-relaxed flex-1">
+                Modern e-commerce platform featuring hot deals, coupons, and a seamless shopping experience.
+              </p>
+
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {["React", "Tailwind CSS", "E-commerce"].map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 bg-gray-50 border border-gray-200 text-gray-600 rounded-md text-xs font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <a href="https://olax-rqos.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-all text-sm">
+                  <ExternalLink className="w-3.5 h-3.5" /> Visit Store
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

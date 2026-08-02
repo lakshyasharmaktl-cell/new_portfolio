@@ -15,7 +15,7 @@ export default function App() {
       <Tech />
       <Expr />
       <Project />
-      <Contacts />
+      {/* <Contacts /> */}
       <Fotter />
     </div>
   )

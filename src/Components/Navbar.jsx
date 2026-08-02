@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Github, Instagram, Menu, X, Download } from 'lucide-react';
+import { Github, Menu, X, Download } from 'lucide-react';
+import { FaLinkedinIn } from "react-icons/fa6";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,102 +22,48 @@ export default function Navbar() {
       color: "hover:text-gray-700"
     },
     { 
-      icon: <Instagram className="w-5 h-5" />, 
-      href: "https://instagram.com", 
-      name: "Instagram",
+      icon: <FaLinkedinIn className="w-5 h-5" />, 
+      href: "https://www.linkedin.com/in/lakshya-sharma-7659803b1/", 
+      name: "Linkedin",
       color: "hover:text-pink-600"
     }
   ];
 
+  // Resume download handler
+  const handleResumeDownload = () => {
+    const resumeUrl = "https://drive.google.com/file/d/1J5oY1ylHBs1KW2kxiE2prIgwlD86uVmZ/view";
+    window.open(resumeUrl, '_blank');
+  };
+
   return (
-    <div className="relative">
-      <style jsx>{`
-        @keyframes slideDown {
-          from {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
+    <>
+      {/* Navigation */}
+      <nav className={`
+        fixed top-0 left-0 right-0 z-50 
+        transition-all duration-500 
+        ${scrolled 
+          ? 'backdrop-blur-xl bg-white/15 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.1)]' 
+          : 'backdrop-blur-md bg-white/10 py-4 border-b border-white/10'
         }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes bounce {
-          0%, 20%, 53%, 80%, 100% {
-            transform: translate3d(0, 0, 0);
-          }
-          40%, 43% {
-            transform: translate3d(0, -8px, 0);
-          }
-          70% {
-            transform: translate3d(0, -4px, 0);
-          }
-        }
-
-        @keyframes jiggle {
-          0%, 100% { transform: rotate(0deg) scale(1); }
-          25% { transform: rotate(-5deg) scale(1.1); }
-          75% { transform: rotate(5deg) scale(1.1); }
-        }
-
-        .animate-slide-down {
-          animation: slideDown 0.6s ease-out;
-        }
-
-        .animate-fade-in-up {
-          animation: fadeInUp 0.6s ease-out;
-        }
-
-        .animate-bounce {
-          animation: bounce 1s ease-in-out;
-        }
-
-        .animate-jiggle {
-          animation: jiggle 0.4s ease-in-out;
-        }
-
-        .glass-effect {
-          backdrop-filter: blur(10px);
-          background: rgba(255, 255, 255, 0.1);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .scrolled-glass {
-          backdrop-filter: blur(20px);
-          background: rgba(255, 255, 255, 0.15);
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-      `}</style>
-
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'scrolled-glass py-2' : 'glass-effect py-4'
-      } animate-slide-down`}>
+        animate-[slideDown_0.6s_ease-out]
+      `}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="animate-fade-in-up">
+            <div className="animate-[fadeInUp_0.6s_ease-out]">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
-                Laxxy
+                Portfilo
               </h1>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-6">
               {/* Download Resume Button */}
-              <button className="group animate-fade-in-up flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 active:scale-95">
-                <Download className="w-4 h-4 group-hover:animate-bounce" />
+              <button 
+                onClick={handleResumeDownload}
+                className="group animate-[fadeInUp_0.6s_ease-out] flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 active:scale-95"
+              >
+                <Download className="w-4 h-4 group-hover:animate-[bounce_1s_ease-in-out]" />
                 <span>Download Resume</span>
               </button>
 
@@ -126,16 +73,20 @@ export default function Navbar() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className={`animate-fade-in-up p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110 ${social.color} group`}
+                    className={`
+                      animate-[fadeInUp_0.6s_ease-out] p-3 rounded-full 
+                      bg-white/10 hover:bg-white/20 transition-all duration-300 
+                      hover:scale-110 ${social.color} group
+                    `}
                     style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.classList.add('animate-jiggle');
+                      e.currentTarget.classList.add('animate-[jiggle_0.4s_ease-in-out]');
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.classList.remove('animate-jiggle');
+                      e.currentTarget.classList.remove('animate-[jiggle_0.4s_ease-in-out]');
                     }}
                     onAnimationEnd={(e) => {
-                      e.currentTarget.classList.remove('animate-jiggle');
+                      e.currentTarget.classList.remove('animate-[jiggle_0.4s_ease-in-out]');
                     }}
                   >
                     <div className="relative">
@@ -165,9 +116,12 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 animate-fade-in-up">
+            <div className="md:hidden mt-4 pb-4 animate-[fadeInUp_0.6s_ease-out]">
               <div className="flex flex-col items-center gap-4">
-                <button className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium hover:shadow-lg transition-all duration-300">
+                <button 
+                  onClick={handleResumeDownload}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium hover:shadow-lg transition-all duration-300"
+                >
                   <Download className="w-4 h-4" />
                   <span>Download Resume</span>
                 </button>
@@ -205,7 +159,30 @@ export default function Navbar() {
         ))}
       </div>
 
+      {/* Global styles using Tailwind's @layer */}
       <style jsx global>{`
+        @keyframes slideDown {
+          from { transform: translateY(-100%); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+          0%, 20%, 53%, 80%, 100% { transform: translate3d(0, 0, 0); }
+          40%, 43% { transform: translate3d(0, -8px, 0); }
+          70% { transform: translate3d(0, -4px, 0); }
+        }
+
+        @keyframes jiggle {
+          0%, 100% { transform: rotate(0deg) scale(1); }
+          25% { transform: rotate(-5deg) scale(1.1); }
+          75% { transform: rotate(5deg) scale(1.1); }
+        }
+
         @keyframes float {
           0%, 100% { transform: translateY(0px) translateX(0px); }
           33% { transform: translateY(-10px) translateX(5px); }
@@ -217,6 +194,6 @@ export default function Navbar() {
           min-height: 100vh;
         }
       `}</style>
-    </div>
-  )
+    </>
+  );
 }

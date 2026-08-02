@@ -187,15 +187,7 @@ export default function Expr() {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-cyan-400/30 backdrop-blur-sm">
-            <span className="flex items-center gap-3">
-              Download Full Resume
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-            </span>
-          </button>
-        </div>
+       
       </div>
 
       <style jsx>{`

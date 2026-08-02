@@ -5,7 +5,7 @@ export default function Home() {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
-  const fullText = "Hi, I am Lakshya , I am a Web Devloper and also a BCA student of RKSD COLLEGE , I very passion of cyber security. ❤️";
+  const fullText = "Hi, I'm Lakshya Sharma, currently pursuing my Bachelor of Computer Applications (BCA). I'm passionate about web development and continuously improving my skills in the MERN stack, ";
 
   useEffect(() => {
     // Image animation
@@ -85,7 +85,7 @@ export default function Home() {
 
               {/* Skills Tags */}
               <div className="mt-6 flex flex-wrap gap-3">
-                {['Full Stack', 'Web Design', 'Cyber Security', 'BCA Student'].map((skill, index) => (
+                {['Full Stack', 'Node.js', 'React.js', 'BCA Student'].map((skill, index) => (
                   <span 
                     key={skill}
                     className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-semibold border border-purple-400/30 backdrop-blur-sm"
@@ -100,15 +100,7 @@ export default function Home() {
               </div>
 
               {/* CTA Button */}
-              <button 
-                className="mt-6 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-white/20 backdrop-blur-sm"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out 2.5s forwards`,
-                  opacity: 0
-                }}
-              >
-                Let's Team Up 🚀
-              </button>
+             
             </div>
           </div>
         </div>
