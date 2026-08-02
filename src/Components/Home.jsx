@@ -63,7 +63,7 @@ export default function Home() {
               
               <img 
                 ref={imageRef}
-                src="https://res.cloudinary.com/dzskwfinc/image/upload/v1782318724/ChatGPT_Image_Jun_24_2026_04_30_04_PM_rgrnrk.png" 
+                src="https://res.cloudinary.com/dzskwfinc/image/upload/v1785651957/pic_ml0vjx.png" 
                 alt="Profile" 
                 className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-white/20 backdrop-blur-sm"
               />
