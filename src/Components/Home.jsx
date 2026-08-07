@@ -19,28 +19,18 @@ export default function Home() {
       imageElement.style.transform = 'scale(1)';
     }, 500);
 
-    let currentIndex = fullText.length;
-    let typingInterval;
+    // Display full text immediately
+    setDisplayText(fullText);
+    
 
-    const startTyping = () => {
-      typingInterval = setInterval(() => {
-        if (currentIndex >= 0) {
-          setDisplayText(fullText.slice(currentIndex));
-          currentIndex--;
-        } else {
-          clearInterval(typingInterval);
-          // Blinking cursor effect
-          setInterval(() => {
-            setShowCursor(prev => !prev);
-          }, 500);
-        }
-      }, 50);
-    };
+    // Blinking cursor effect only
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
 
-    setTimeout(startTyping, 1000);
-
+    // Cleanup
     return () => {
-      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
     };
   }, []);
 
@@ -73,7 +63,7 @@ export default function Home() {
           {/* Text Content */}
           <div className="w-full md:w-1/2">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20">
-              {/* Right to Left Typing Animation */}
+              {/* Text Display with Blinking Cursor */}
               <div className="text-white text-xl leading-relaxed font-mono min-h-[120px]">
                 <span className="typing-text">
                   {displayText}
@@ -90,7 +80,7 @@ export default function Home() {
                     key={skill}
                     className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-semibold border border-purple-400/30 backdrop-blur-sm"
                     style={{
-                      animation: `fadeInUp 0.6s ease-out ${index * 0.1 + 2}s forwards`,
+                      animation: `fadeInUp 0.6s ease-out ${index * 0.1 + 0.5}s forwards`,
                       opacity: 0
                     }}
                   >
@@ -100,7 +90,11 @@ export default function Home() {
               </div>
 
               {/* CTA Button */}
-             
+              <div className="mt-6">
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105">
+                  Hire Me
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -122,17 +116,30 @@ export default function Home() {
           display: inline-block;
           background-color: white;
           margin-left: 2px;
-          animation: blink 1s infinite;
           font-weight: bold;
+          width: 2px;
+          height: 1.2em;
+        }
+
+        /* Blinking animation using CSS */
+        .cursor {
+          animation: blink 1s step-end infinite;
         }
 
         @keyframes blink {
-          0%, 50% {
+          0%, 100% {
             opacity: 1;
           }
-          51%, 100% {
+          50% {
             opacity: 0;
           }
+        }
+
+        /* Smooth text appearance */
+        .typing-text {
+          display: inline;
+          opacity: 1;
+          transition: opacity 0.3s ease;
         }
       `}</style>
     </div>
